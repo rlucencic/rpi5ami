@@ -6,8 +6,8 @@
 
 #define ROM_MAX_SIZE    (512 * 1024)
 
-/* Load Kickstart `kick` into buf (ROM_MAX_SIZE bytes): a file in the data
- * folder's roms/ (any name) with that version (the boards also read flash
+/* Load Kickstart `kick` into buf (ROM_MAX_SIZE bytes): a file in the machine's
+ * roms/ folder (any name) with that version (the boards also read flash
  * partitions). Its size in *size, its name ("Kickstart 1.3 (34.5)") in
  * *name.
  */

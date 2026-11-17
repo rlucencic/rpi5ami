@@ -146,8 +146,8 @@ cmake -S . -B build -G Ninja && cmake --build build
 
 ### 3. ROMs
 
-Kickstarts in the data folder's `roms/` (`~/rpi5emu/roms`), under any name:
-each is found by its version (esp32ami's are FS-UAE's names,
+Kickstarts in the data folder's `amiga/roms/` (`~/rpi5emu/amiga/roms`),
+under any name: each is found by its version (esp32ami's are FS-UAE's names,
 `amiga-os-130.rom` ...). Not part of this repository; AROS's two ROMs are
 free.
 
@@ -155,7 +155,7 @@ free.
 
 1. `build/rpi5ami`: the setup screen opens in a window.
 2. Choose the model and click **Start**.
-3. Put images into `~/rpi5emu/floppies/`, drop them on the window or the web page, and
+3. Put images into `~/rpi5emu/amiga/`, drop them on the window or the web page, and
    insert them on the setup screen's **Disks** page.
 
 ## Using it
@@ -174,7 +174,7 @@ free.
 | Play an Amiga Forever game | Its `.rp9` into DF0: (into DH0: if it has a hard disk); the same package again: its next disk |
 | Make a blank disk | Web page: **New blank disk** (880 KB, or a 20, 50 or 100 MB hard disk to format on the Amiga) |
 
-Images live in `~/rpi5emu/floppies/`, settings in `~/.config/rpi5emu/settings.ini`; the
+Images live in `~/rpi5emu/amiga/`, settings in `~/.config/rpi5emu/settings.ini`; the
 inserted images are remembered across starts. `build/rpi5ami --help` lists the options.
 
 **Keyboard**: by position, as on an Amiga. Help is F11, the Amiga keys are
@@ -197,7 +197,7 @@ flowchart LR
   EMU -- picture --> WIN
   EMU -- sound --> SND[SDL audio]
   WIN -- keys · mouse --> EMU
-  DATA[("~/rpi5emu<br>roms · floppies")]
+  DATA[("~/rpi5emu<br>amiga · amiga/roms")]
   EMU <--> DATA
   WEB <--> DATA
 ```

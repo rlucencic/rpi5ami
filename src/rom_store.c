@@ -42,13 +42,13 @@ static bool is_rom(kick_t kick, bool ext, const uint8_t *buf, uint32_t size)
     return !ext && major == s_kick[kick].major && minor == s_kick[kick].minor;
 }
 
-/* Any file in the data folder's roms/ with that version (the boards also
+/* Any file in the machine's roms/ folder with that version (the boards also
  * read flash partitions: s_kick's names)
  */
 static bool from_folder(kick_t kick, bool ext, uint8_t *buf)
 {
     char folder[1200];
-    snprintf(folder, sizeof(folder), "%s/roms", emu_data_dir());
+    snprintf(folder, sizeof(folder), "%s", emu_rom_dir());
     DIR *dir = opendir(folder);
     if (dir == NULL) {
         return false;

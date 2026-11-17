@@ -89,8 +89,8 @@ static bool start(void)
             "Kickstart 1.2 (33.180)", "AROS ROM and its extension ROM", "Kickstart 3.0 (39.106) for the A1200",
             "Kickstart 3.1 (40.68) for the A1200",
         };
-        snprintf(text, sizeof(text), "No %s: copy it into %s/roms (any name: found by its version).",
-                 names[settings.kick], emu_data_dir());
+        snprintf(text, sizeof(text), "No %s: copy it into %s (any name: found by its version).",
+                 names[settings.kick], emu_rom_dir());
         emu_set_message(text);
         return false;
     }
@@ -670,7 +670,7 @@ static void disk_removed(const char *path)
 }
 
 static const disks_config_t disks = {
-    .folder = "floppies",
+    .folder = "amiga",
     .extensions = extensions,
     .description = "Disk images (.ADF, .HDF) and Amiga Forever games (.RP9)",
     .title = "Disks",

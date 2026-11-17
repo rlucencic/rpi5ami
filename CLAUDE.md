@@ -14,7 +14,7 @@ project is the glue.
 |---|---|
 | `src/main.c` | The Amiga as an `emu_machine_t`: esp32ami's `main/main.c` through `../rpi5emu/tools/port_glue.py` and `port_finish.py`, then by hand: the memory by `malloc()` (16-byte aligned), the ROM message, the Tab5 panel's width for super-hires frames (`BOARD_LCD_H_RES` 1280: shown one to one there, the same shape here), the web script built in, `shutdown()` saves the clock's offset and writes the floppies back, the core's host-build watch hook a no-op |
 | `src/settings.c` | esp32ami's, over `emu/nvs.h` (section `ami`) |
-| `src/rom_store.c` | A file in `~/rpi5emu/roms/` of the Kickstart's size and version (AROS's by "AROS ROM"/"AROS EXT"), any name |
+| `src/rom_store.c` | A file in `~/rpi5emu/amiga/roms/` (`emu_rom_dir()`) of the Kickstart's size and version (AROS's by "AROS ROM"/"AROS EXT"), any name |
 | `CMakeLists.txt` | `rpi5emu_embed()` builds in esp32ami's `main/web/amifiles.js` |
 
 The opcode table copies stay (unlike the Macs' and the ST's): the Amiga
