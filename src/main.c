@@ -1,8 +1,8 @@
 /*
- * Amiga 500, 2000, 600 and 1200 emulator on the Raspberry Pi 5.
+ * Amiga 500, 2000, 600 and 1200 emulator with SDL 3.
  *
  * The Pi's side (window, sound, keyboard, setup screen, web page, console,
- * settings, the data folder) is the shared runtime in ../rpi5emu, the
+ * settings, the data folder) is the shared runtime in ../sdlemu, the
  * machine esp32ami's; this file plugs the Amiga into it, as esp32ami's
  * main/main.c does on the boards (and mostly is that file): memory,
  * Kickstart, settings, drives (floppies, a hard disk), the clock,
